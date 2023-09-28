@@ -15,7 +15,7 @@
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction Home() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"home\"\n      }, m(\"p\", {\n        \"class\": \"hi\"\n      }, \"Salut, je suis\"), m(\"h2\", null, \"J\\xE9r\\xE9my Deurviller\"), m(\"h3\", null, \"D\\xE9veloppeur Web \", m(\"span\", null, \"passionn\\xE9\")), m(\"p\", {\n        \"class\": \"home-cta\"\n      }, m(\"a\", {\n        href: \"/about\",\n        \"class\": \"button\"\n      }, \"D\\xE9couvrir\"))));\n    }\n  };\n}\nmodule.exports = Home;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/home/Home.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction Home() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"home\"\n      }, m(\"p\", {\n        \"class\": \"hi\"\n      }, \"Salut, je suis\"), m(\"h2\", null, \"J\\xE9r\\xE9my Deurviller\"), m(\"h3\", null, \"D\\xE9veloppeur Web \", m(\"span\", null, \"passionn\\xE9\")), m(\"p\", {\n        \"class\": \"home-cta\"\n      }, m(m.route.Link, {\n        href: \"/about\",\n        \"class\": \"button\"\n      }, \"D\\xE9couvrir\"))));\n    }\n  };\n}\nmodule.exports = Home;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/home/Home.js?");
 
 /***/ }),
 
@@ -35,7 +35,17 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction Navigation() {\n  return {\n    view: function view() {\n      return m(\"nav\", {\n        id: \"navigation\"\n      }, m(\"h1\", {\n        \"class\": \"brand\"\n      }, m(\"a\", {\n        href: \"/\"\n      }, \"JD\")), m(\"a\", {\n        href: \"#menu\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-bars\",\n        \"aria-hidden\": \"true\"\n      }), \"Menu\"), m(\"ul\", {\n        id: \"menu\"\n      }, m(\"li\", null, m(\"a\", {\n        href: \"#\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-times\",\n        \"aria-hidden\": \"true\"\n      }), \"Fermer\")), m(\"li\", null, m(\"a\", {\n        href: \"/\"\n      }, \"Accueil\")), m(\"li\", null, m(\"a\", {\n        href: \"/about\"\n      }, \"A propos\")), m(\"li\", null, m(\"a\", {\n        href: \"/projects\"\n      }, \"Projets\")), m(\"li\", null, m(\"a\", {\n        href: \"/contact\"\n      }, \"Contact\")), m(\"li\", null, m(\"a\", {\n        href: \"/assets/medias/pdf/jeremy-deurvillier_resume.pdf\"\n      }, \"Mon CV\"))));\n    }\n  };\n}\nmodule.exports = Navigation;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/navigation/Navigation.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Link = m.route.Link;\nfunction Navigation() {\n  return {\n    view: function view() {\n      return m(\"nav\", {\n        id: \"navigation\"\n      }, m(\"h1\", {\n        \"class\": \"brand\"\n      }, m(Link, {\n        href: \"/\"\n      }, \"JD\")), m(\"a\", {\n        href: \"#menu\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-bars\",\n        \"aria-hidden\": \"true\"\n      }), \"Menu\"), m(\"ul\", {\n        id: \"menu\"\n      }, m(\"li\", null, m(\"a\", {\n        href: \"#\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-times\",\n        \"aria-hidden\": \"true\"\n      }), \"Fermer\")), m(\"li\", null, m(Link, {\n        href: \"/\"\n      }, \"Accueil\")), m(\"li\", null, m(Link, {\n        href: \"/about\"\n      }, \"A propos\")), m(\"li\", null, m(Link, {\n        href: \"/projects\"\n      }, \"Projets\")), m(\"li\", null, m(Link, {\n        href: \"/contact\"\n      }, \"Contact\")), m(\"li\", null, m(\"a\", {\n        href: \"/assets/medias/pdf/jeremy-deurvillier_resume.pdf\"\n      }, \"Mon CV\"))));\n    }\n  };\n}\nmodule.exports = Navigation;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/navigation/Navigation.js?");
+
+/***/ }),
+
+/***/ "./src/components/not-found/NotFound.js":
+/*!**********************************************!*\
+  !*** ./src/components/not-found/NotFound.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction NotFound() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"not-found\"\n      }, m(\"h2\", null, \"Erreur 404\"), m(\"h3\", null, \"Cette page n'existe pas !\"), m(\"p\", {\n        \"class\": \"home-cta\"\n      }, m(m.route.Link, {\n        href: \"/\",\n        \"class\": \"button\"\n      }, \"Aller \\xE0 l'accueil\"))));\n    }\n  };\n}\nmodule.exports = NotFound;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/not-found/NotFound.js?");
 
 /***/ }),
 
@@ -45,7 +55,7 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar home = {\n  render: function render() {\n    return m(Home, null);\n  }\n};\nm.route.prefix = '';\nm.route(document.querySelector('div#root'), '/', {\n  '/': home\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar home = {\n  render: function render() {\n    return m(Home, null);\n  }\n};\nvar notFound = {\n  render: function render() {\n    return m(NotFound, null);\n  }\n};\nm.route.prefix = '';\nm.route(document.querySelector('div#root'), '/', {\n  '/': home,\n  '/:404': notFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 

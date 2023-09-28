@@ -12,6 +12,10 @@ h1, h2 {
 }
 
 h2 {
+    margin-bottom: 20px;
+}
+
+h2 {
     font-family: 'Baloo Paaji 2', cursive;
     font-size: 1.8em;
     text-align: center;
@@ -125,6 +129,18 @@ a, a:visited {
 
 #menu > li:last-child {
     align-self: flex-end;
+}
+
+/* ***** 404 page component ***** */
+
+#not-found {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* 70px = #navigation height */
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 /* ***** Home component ***** */

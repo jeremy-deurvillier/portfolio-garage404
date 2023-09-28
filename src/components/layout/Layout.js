@@ -1,4 +1,4 @@
-var m = require("mithril");
+const m = require("mithril");
 
 function Layout() {
     return {

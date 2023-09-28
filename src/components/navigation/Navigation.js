@@ -1,11 +1,12 @@
-var m = require("mithril");
+const m = require("mithril");
+const Link = m.route.Link;
 
 function Navigation() {
     return {
         view: () => (
             <nav id="navigation">
                 <h1 class="brand">
-                    <a href="/">JD</a>
+                    <Link href="/">JD</Link>
                 </h1>
                 <a href="#menu">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -19,16 +20,16 @@ function Navigation() {
                         </a>
                     </li>
                     <li>
-                        <a href="/">Accueil</a>
+                        <Link href="/">Accueil</Link>
                     </li>
                     <li>
-                        <a href="/about">A propos</a>
+                        <Link href="/about">A propos</Link>
                     </li>
                     <li>
-                        <a href="/projects">Projets</a>
+                        <Link href="/projects">Projets</Link>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <Link href="/contact">Contact</Link>
                     </li>
                     <li>
                         <a href="/assets/medias/pdf/jeremy-deurvillier_resume.pdf">Mon CV</a>
