@@ -59,13 +59,23 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
 
 /***/ }),
 
+/***/ "./src/components/project/Item.js":
+/*!****************************************!*\
+  !*** ./src/components/project/Item.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction Item() {\n  return {\n    view: function view(vnode) {\n      var project = vnode.attrs.project;\n      var preview = project.urls.preview;\n      var source = project.urls.github;\n      var imgSrc = 'assets/medias/projects/' + project.image;\n      var imgAlt = 'Image du projet \"' + project.name + '\"';\n      return m(\"div\", {\n        \"class\": \"item-project\"\n      }, m(\"img\", {\n        src: imgSrc,\n        alt: imgAlt\n      }), m(\"div\", {\n        \"class\": \"content\"\n      }, m(\"h4\", null, project.name), m(\"ul\", {\n        \"class\": \"item-project-links\"\n      }, m(\"li\", null, m(\"a\", {\n        href: preview,\n        target: \"_blank\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-external-link\",\n        \"aria-hidden\": \"true\"\n      }), \"Voir la d\\xE9mo\")), m(\"li\", null, m(\"a\", {\n        href: source,\n        target: \"_blank\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-github\",\n        \"aria-hidden\": \"true\"\n      }), \"Voir le code source\")))));\n    }\n  };\n}\nmodule.exports = Item;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/project/Item.js?");
+
+/***/ }),
+
 /***/ "./src/components/project/List.js":
 /*!****************************************!*\
   !*** ./src/components/project/List.js ***!
   \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction List() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"not-found\"\n      }, m(\"h2\", null, \"Projets\"), m(\"p\", null, \"Projects list\")));\n    }\n  };\n}\nmodule.exports = List;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/project/List.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nvar Item = __webpack_require__(/*! ./Item */ \"./src/components/project/Item.js\");\nvar rawProjects = __webpack_require__(/*! ../../../datas/projects.json */ \"./datas/projects.json\");\nvar projects = rawProjects.projects;\nfunction List() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"projects\"\n      }, m(\"h2\", null, \"Projets\"), m(\"div\", null, projects.map(function (project) {\n        return m(Item, {\n          project: project\n        });\n      }))));\n    }\n  };\n}\nmodule.exports = List;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/project/List.js?");
 
 /***/ }),
 
@@ -75,7 +85,7 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar About = __webpack_require__(/*! ./components/about/About */ \"./src/components/about/About.js\");\nvar Projects = __webpack_require__(/*! ./components/project/List */ \"./src/components/project/List.js\");\nvar home = {\n  render: function render() {\n    return m(Home, null);\n  }\n};\nvar about = {\n  render: function render() {\n    return m(About, null);\n  }\n};\nvar projectsList = {\n  render: function render() {\n    return m(Projects, null);\n  }\n};\nvar notFound = {\n  render: function render() {\n    return m(NotFound, null);\n  }\n};\nm.route(document.querySelector('div#root'), '/', {\n  '/': home,\n  '/about': about,\n  '/projects': projectsList,\n  '/:404': notFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar About = __webpack_require__(/*! ./components/about/About */ \"./src/components/about/About.js\");\nvar Projects = __webpack_require__(/*! ./components/project/List */ \"./src/components/project/List.js\");\nm.route(document.querySelector('div#root'), '/', {\n  '/': Home,\n  '/about': About,\n  '/projects': Projects,\n  '/:404': NotFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 
@@ -351,6 +361,17 @@ eval("\n\n// Note: this is mildly perf-sensitive.\n//\n// It does *not* use `del
 
 "use strict";
 eval("// This exists so I'm only saving it once.\n\n\nmodule.exports = {}.hasOwnProperty\n\n\n//# sourceURL=webpack://portfolio-garage404/./node_modules/mithril/util/hasOwn.js?");
+
+/***/ }),
+
+/***/ "./datas/projects.json":
+/*!*****************************!*\
+  !*** ./datas/projects.json ***!
+  \*****************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = JSON.parse('{\"projects\":[{\"name\":\"The Mountain\",\"urls\":{\"preview\":\"https://jeremyd-the-mountain.projets.garage404.com\",\"github\":\"https://github.com/jeremy-deurvillier/bootstrap-challenge-the_mountain\"},\"image\":\"the-mountain.png\",\"description\":\"Intégration d\\'une maquette en HTML / CSS. Utilisation de Bootstrap.\",\"tags\":[\"HTML\",\"CSS\",\"Bootstrap\"]}]}');\n\n//# sourceURL=webpack://portfolio-garage404/./datas/projects.json?");
 
 /***/ })
 

@@ -1,0 +1,121 @@
+{
+	"identity": {
+    "name": {
+		  "first": "Jérémy",
+		  "last": "Deurvillier"
+    },
+		"birthday": "16-12-1989"
+	},
+	"job": {
+		"title": "Développeur Web",
+		"tags": ["Next.js", "Symfony", "Wordpress"]
+	},
+	"contact": {
+		"tel": ["07 49 93 35 90"],
+		"mailto": ["contact@jeremy-deurvillier.com"],
+		"link": [
+			"https://github.com/jeremy-deurvillier",
+			"https://fr.linkedin.com/in/jeremy-deurvillier"
+		]
+	},
+	"about": [
+		"Je suis Jérémy Deurvillier, Développeur Web depuis 2017. Je suis un passionné du code. J'aime apprendre et découvrir de nouvelles choses, dans tous les domaines. Les gros projets ne me font pas peur, j'aime les challenges et me donner à cent pour cent est une habitude de tous les jours. J'aime explorer les 64 cases du jeu d'échecs régulièrement, le karaté depuis de nombreuses années et enfin la randonnée, activité dont je ne me lasse jamais."
+	],
+	"experiences": [
+		{
+			"job": "Agent de maintenance",
+			"company": "Cartonnerie de La Réunion",
+			"location": "Saint-Pierre, Réunion",
+			"dates": [2006, 2008],
+			"activities": [
+				{
+					"activity": "Non renseigné."
+				}
+			]
+		},
+		{
+			"job": "Technicien de maintenance",
+			"company": "SPHB",
+			"location": "Saint-Pierre, Réunion",
+			"dates": [2009, 2010],
+			"activities": [
+				{
+					"activity": "Maintenance préventive."
+				},
+				{
+					"activity": "Maintenance currative."
+				},
+				{
+					"activity": "Non renseigné."
+				}
+			]
+		},
+		{
+			"job": "Agent polyvalent",
+			"company": "Famille Marie Jeunesse",
+			"location": "Le Tampon, Réunion",
+			"dates": [2012, 2015],
+			"activities": [
+				{
+					"activity": "Réparation et maintenance."
+				},
+				{
+					"activity": "Restauration d'un batiment."
+				}
+			]
+		},
+		{
+			"job": "Développeur Wordpress",
+			"company": "Agence Nautilus",
+			"location": "Saint-Denis, Réunion",
+			"dates": [2017],
+			"activities": [
+				{
+					"activity": "Refonte du site de l'agence."
+				},
+				{
+					"activity": "Utilisation du thème The 7."
+				},
+				{
+					"activity": "Utilisation des plugins ..."
+				}
+			]
+		}
+	],
+	"education": [
+		{
+			"diploma": "BEP",
+			"title": "Maintenance des Systèmes Mécaniques Automatisés",
+			"training-site": "Lycée Boisjoly Potier",
+			"location": "Le Tampon, Réunion",
+			"date": 2007
+
+		},
+		{
+			"diploma": "BAC PRO",
+			"title": "Maintenance des Équipements Industriels",
+			"training-site": "Lycée Boisjoly Potier",
+			"location": "Le Tampon, Réunion",
+			"date": 2009
+		},
+		{
+			"diploma": "BAC +2",
+			"title": "Développeur Logiciel",
+			"training-site": "AFPAR",
+			"location": "Saint-André, Réunion",
+			"date": 2017
+		},
+    {
+			"diploma": "BAC +2",
+			"title": "Développeur Web et Web Mobile",
+			"training-site": "Garage 404",
+			"location": "Saint-Étienne, France",
+			"date": 2023
+		}
+	],
+	"skills": {
+    "soft": ["Organisé", "Patient", "Esprit d'équipe", "Fiable", "Résilient"],
+    "hard": ["Next.js", "Symfony", "Wordpress", "Docker", "Mithril", "Figma"]
+	},
+	"languages": ["Francais"]
+}
