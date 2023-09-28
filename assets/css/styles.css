@@ -12,13 +12,9 @@ h1, h2 {
 }
 
 h2 {
-    margin-bottom: 20px;
-}
-
-h2 {
     font-family: 'Baloo Paaji 2', cursive;
     font-size: 1.8em;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -170,4 +166,21 @@ h3 > span {
 
 .home-cta {
     margin-top: 80px;
+}
+
+/* ***** About component ***** */
+
+#about {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.text-long {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.about-cta {
+    text-align: center;
+    margin: 80px 0;
 }

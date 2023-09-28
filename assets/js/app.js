@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/about/About.js":
+/*!***************************************!*\
+  !*** ./src/components/about/About.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction About() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"about\"\n      }, m(\"h2\", null, \"A propos\"), m(\"p\", {\n        \"class\": \"text-long\"\n      }, \"Je suis J\\xE9r\\xE9my Deurvillier, D\\xE9veloppeur Web depuis 2017. Je suis un passionn\\xE9 du code. J'aime apprendre et d\\xE9couvrir de nouvelles choses, dans tous les domaines. Les gros projets ne me font pas peur, j'aime les challenges et me donner \\xE0 cent pour cent est une habitude de tous les jours. J'aime explorer les 64 cases du jeu d'\\xE9checs r\\xE9guli\\xE8rement, le karat\\xE9 depuis de nombreuses ann\\xE9es et enfin la randonn\\xE9e, activit\\xE9 dont je ne me lasse jamais.\"), m(\"p\", {\n        \"class\": \"about-cta\"\n      }, m(m.route.Link, {\n        href: \"/projects\",\n        \"class\": \"button\"\n      }, \"Voir mes projets\"))));\n    }\n  };\n}\nmodule.exports = About;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/about/About.js?");
+
+/***/ }),
+
 /***/ "./src/components/home/Home.js":
 /*!*************************************!*\
   !*** ./src/components/home/Home.js ***!
@@ -55,7 +65,7 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar home = {\n  render: function render() {\n    return m(Home, null);\n  }\n};\nvar notFound = {\n  render: function render() {\n    return m(NotFound, null);\n  }\n};\nm.route.prefix = '';\nm.route(document.querySelector('div#root'), '/', {\n  '/': home,\n  '/:404': notFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar About = __webpack_require__(/*! ./components/about/About */ \"./src/components/about/About.js\");\nvar home = {\n  render: function render() {\n    return m(Home, null);\n  }\n};\nvar about = {\n  render: function render() {\n    return m(About, null);\n  }\n};\nvar notFound = {\n  render: function render() {\n    return m(NotFound, null);\n  }\n};\nm.route(document.querySelector('div#root'), '/', {\n  '/': home,\n  '/about': about,\n  '/:404': notFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 
