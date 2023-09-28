@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/navigation/Navigation.js":
+/*!*************************************************!*\
+  !*** ./src/components/navigation/Navigation.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction Navigation() {\n  return {\n    view: function view() {\n      return m(\"nav\", {\n        id: \"navigation\"\n      }, m(\"h1\", {\n        \"class\": \"brand\"\n      }, m(\"a\", {\n        href: \"/\"\n      }, \"JD\")), m(\"a\", {\n        href: \"#menu\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-bars\",\n        \"aria-hidden\": \"true\"\n      }), \"Menu\"), m(\"ul\", {\n        id: \"menu\"\n      }, m(\"li\", null, m(\"a\", {\n        href: \"#\"\n      }, m(\"i\", {\n        \"class\": \"fa fa-times\",\n        \"aria-hidden\": \"true\"\n      }), \"Fermer\")), m(\"li\", null, m(\"a\", {\n        href: \"/\"\n      }, \"Accueil\")), m(\"li\", null, m(\"a\", {\n        href: \"/about\"\n      }, \"A propos\")), m(\"li\", null, m(\"a\", {\n        href: \"/projects\"\n      }, \"Projets\")), m(\"li\", null, m(\"a\", {\n        href: \"/contact\"\n      }, \"Contact\")), m(\"li\", null, m(\"a\", {\n        href: \"/assets/medias/pdf/jeremy-deurvillier_resume.pdf\"\n      }, \"Mon CV\"))));\n    }\n  };\n}\nmodule.exports = Navigation;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/navigation/Navigation.js?");
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction App() {\n  return {\n    view: function view() {\n      return m(\"main\", null, m(\"h1\", null, \"Hello world\"));\n    }\n  };\n}\nm.render(document.querySelector('div#root'), m(App, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Navigation = __webpack_require__(/*! ./components/navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction App() {\n  return {\n    view: function view() {\n      return m(\"div\", null, m(\"header\", {\n        \"class\": \"container\"\n      }, m(Navigation, null)), m(\"main\", null, m(\"h1\", null, \"Hello world\")));\n    }\n  };\n}\nm.render(document.querySelector('div#root'), m(App, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 
