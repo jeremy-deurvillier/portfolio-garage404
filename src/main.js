@@ -1,6 +1,6 @@
-var m = require("mithril")
+var m = require("mithril");
 
-function MyComponent() {
+function App() {
     return {
         view: () => (
             <main>
@@ -10,4 +10,4 @@ function MyComponent() {
     };
 }
 
-m.render(document.body, <MyComponent />)
+m.render(document.querySelector('div#root'), <App />);

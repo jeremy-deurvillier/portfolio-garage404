@@ -15,7 +15,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction MyComponent() {\n  return {\n    view: function view() {\n      return m(\"main\", null, m(\"h1\", null, \"Hello world\"));\n    }\n  };\n}\nm.render(document.body, m(MyComponent, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction App() {\n  return {\n    view: function view() {\n      return m(\"main\", null, m(\"h1\", null, \"Hello world\"));\n    }\n  };\n}\nm.render(document.querySelector('div#root'), m(App, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 
