@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/home/Home.js":
+/*!*************************************!*\
+  !*** ./src/components/home/Home.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction Home() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"home\"\n      }, m(\"p\", {\n        \"class\": \"hi\"\n      }, \"Salut, je suis\"), m(\"h2\", null, \"J\\xE9r\\xE9my Deurviller\"), m(\"h3\", null, \"D\\xE9veloppeur Web \", m(\"span\", null, \"passionn\\xE9\")), m(\"p\", {\n        \"class\": \"home-cta\"\n      }, m(\"a\", {\n        href: \"/about\",\n        \"class\": \"button\"\n      }, \"D\\xE9couvrir\"))));\n    }\n  };\n}\nmodule.exports = Home;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/home/Home.js?");
+
+/***/ }),
+
 /***/ "./src/components/layout/Layout.js":
 /*!*****************************************!*\
   !*** ./src/components/layout/Layout.js ***!
@@ -35,7 +45,7 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Navigation = __webpack_require__(/*! ./components/navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nvar Layout = __webpack_require__(/*! ./components/layout/Layout */ \"./src/components/layout/Layout.js\");\nfunction App() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)));\n    }\n  };\n}\nm.render(document.querySelector('div#root'), m(App, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar home = {\n  render: function render() {\n    return m(Home, null);\n  }\n};\nm.route.prefix = '';\nm.route(document.querySelector('div#root'), '/', {\n  '/': home\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 

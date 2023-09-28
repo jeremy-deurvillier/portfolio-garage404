@@ -2,17 +2,43 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
+    color: #0a0a0a;
+    background: #fafafa;
     min-height: 100vh;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Baloo Paaji 2', cursive;
+h1, h2 {
     line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4em;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    text-align: center;
 }
 
 a, a:visited {
     text-decoration: none;
-    color: #000;
+    color: #0a0a0a;
+}
+
+.button {
+    padding: 10px;
+    border: 3px solid #0a0a0a;
+    border-radius: 30px 60px;
+    box-sizing: border-box;
+    transition: border-radius .3s;
+}
+
+.button:hover {
+    border-radius: 60px 30px;
 }
 
 /* ***** Navigation component ***** */
@@ -22,10 +48,13 @@ a, a:visited {
     flex-flow: row no-wrap;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
+    box-sizing: border-box;
     padding: 10px;
 }
 
 .brand {
+    font-family: 'Baloo Paaji 2', cursive;
     font-size: 2.2em;
 }
 
@@ -96,4 +125,33 @@ a, a:visited {
 
 #menu > li:last-child {
     align-self: flex-end;
+}
+
+/* ***** Home component ***** */
+
+#home {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* 70px = #navigation height */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+h3 > span {
+    text-decoration: underline;
+    color: #000;
+    display: block;
+}
+
+#home .hi {
+    font-size: 1.2em;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 40px;
+}
+
+.home-cta {
+    margin-top: 80px;
 }

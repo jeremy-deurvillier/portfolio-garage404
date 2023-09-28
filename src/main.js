@@ -1,17 +1,12 @@
 const m = require('mithril');
-const Navigation = require('./components/navigation/Navigation');
-const Layout = require('./components/layout/Layout');
+const Home = require('./components/home/Home');
 
-function App() {
-    return {
-        view: () => (
-            <Layout>
-                <header>
-                    <Navigation />
-                </header>
-            </Layout>
-        ),
-    };
+const home = {
+    render: () => <Home />
 }
 
-m.render(document.querySelector('div#root'), <App />);
+m.route.prefix = '';
+
+m.route(document.querySelector('div#root'), '/', {
+    '/': home,
+});
