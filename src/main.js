@@ -1,17 +1,15 @@
 const m = require('mithril');
 const Navigation = require('./components/navigation/Navigation');
+const Layout = require('./components/layout/Layout');
 
 function App() {
     return {
         view: () => (
-            <div>
-                <header class="container">
+            <Layout>
+                <header>
                     <Navigation />
                 </header>
-                <main>
-                    <h1>Hello world</h1>
-                </main>
-            </div>
+            </Layout>
         ),
     };
 }

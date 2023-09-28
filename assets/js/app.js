@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/layout/Layout.js":
+/*!*****************************************!*\
+  !*** ./src/components/layout/Layout.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nfunction Layout() {\n  return {\n    view: function view(vnode) {\n      return m(\"main\", {\n        id: \"layout\"\n      }, vnode.children);\n    }\n  };\n}\nmodule.exports = Layout;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/layout/Layout.js?");
+
+/***/ }),
+
 /***/ "./src/components/navigation/Navigation.js":
 /*!*************************************************!*\
   !*** ./src/components/navigation/Navigation.js ***!
@@ -25,7 +35,7 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Navigation = __webpack_require__(/*! ./components/navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nfunction App() {\n  return {\n    view: function view() {\n      return m(\"div\", null, m(\"header\", {\n        \"class\": \"container\"\n      }, m(Navigation, null)), m(\"main\", null, m(\"h1\", null, \"Hello world\")));\n    }\n  };\n}\nm.render(document.querySelector('div#root'), m(App, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Navigation = __webpack_require__(/*! ./components/navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nvar Layout = __webpack_require__(/*! ./components/layout/Layout */ \"./src/components/layout/Layout.js\");\nfunction App() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)));\n    }\n  };\n}\nm.render(document.querySelector('div#root'), m(App, null));\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 
