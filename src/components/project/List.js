@@ -16,7 +16,7 @@ function List() {
                 <section id="projects">
                     <h2>Projets</h2>
                     <div>
-                      { projects.map(project => <Item project={ project } />) }
+                      { projects.map((project, index) => <Item key={ index } project={ project } />) }
                     </div>
                 </section>
             </Layout>

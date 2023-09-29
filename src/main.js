@@ -4,6 +4,8 @@ const NotFound = require('./components/not-found/NotFound');
 const About = require('./components/about/About');
 const Projects = require('./components/project/List');
 
+// m.route.prefix = ''; // For debug
+
 m.route(document.querySelector('div#root'), '/', {
     '/': Home,
     '/about': About,
