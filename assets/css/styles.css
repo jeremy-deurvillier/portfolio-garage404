@@ -248,12 +248,14 @@ h3>span {
     margin: 40px 0 20px 0;
 }
 
-.item-project-links li a {
+.item-project-links li a,
+#contact p a {
     display: inline-block;
     margin: 10px 0;
 }
 
-.item-project-links li a::after {
+.item-project-links li a::after,
+#contact p a::after {
     content: "";
     background: #171717;
     width: 0;
@@ -263,7 +265,8 @@ h3>span {
     transition: width .6s;
 }
 
-.item-project-links li a:hover::after {
+.item-project-links li a:hover::after,
+#contact p a:hover::after {
     width: 100%;
 }
 
@@ -313,4 +316,28 @@ h3>span {
     padding: 10px;
     border-radius: 30px 60px;
     box-sizing: border-box;
+}
+
+/* ***** Projects List component ***** */
+
+#contact {
+    height: calc(100vh - 70px);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#contact .content {
+    text-align: center;
+    height: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#contact ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 30px;
 }

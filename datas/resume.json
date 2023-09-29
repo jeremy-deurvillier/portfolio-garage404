@@ -11,11 +11,17 @@
 		"tags": ["Next.js", "Symfony", "Wordpress"]
 	},
 	"contact": {
-		"tel": ["07 49 93 35 90"],
-		"mailto": ["contact@jeremy-deurvillier.com"],
-		"link": [
-			"https://github.com/jeremy-deurvillier",
-			"https://fr.linkedin.com/in/jeremy-deurvillier"
+		"tel": "07 49 93 35 90",
+		"mailto": "jerem.deurvil@gmail.com",
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/jeremy-deurvillier"
+			},
+			{
+				"name": "Linkedin",
+				"url": "https://fr.linkedin.com/in/jeremy-deurvillier"
+			}
 		]
 	},
 	"about": [

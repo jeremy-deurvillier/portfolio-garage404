@@ -19,6 +19,16 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
 
 /***/ }),
 
+/***/ "./src/components/contact/Contact.js":
+/*!*******************************************!*\
+  !*** ./src/components/contact/Contact.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Layout = __webpack_require__(/*! ../layout/Layout */ \"./src/components/layout/Layout.js\");\nvar Navigation = __webpack_require__(/*! ../navigation/Navigation */ \"./src/components/navigation/Navigation.js\");\nvar rawContact = __webpack_require__(/*! ../../../datas/resume.json */ \"./datas/resume.json\");\nvar contact = rawContact.contact;\nfunction List() {\n  return {\n    view: function view() {\n      return m(Layout, null, m(\"header\", null, m(Navigation, null)), m(\"section\", {\n        id: \"contact\"\n      }, m(\"h2\", null, \"Contact\"), m(\"div\", {\n        \"class\": \"content\"\n      }, m(\"p\", null, m(\"div\", null, m(\"i\", {\n        \"class\": \"fa fa-phone\",\n        \"aria-hidden\": \"true\"\n      })), m(\"a\", {\n        href: 'tel:' + contact.tel\n      }, contact.tel)), m(\"p\", null, m(\"div\", null, m(\"i\", {\n        \"class\": \"fa fa-at\",\n        \"aria-hidden\": \"true\"\n      })), m(\"a\", {\n        href: 'mailto:' + contact.mailto\n      }, contact.mailto)), m(\"ul\", null, contact.links.map(function (network) {\n        return m(\"li\", null, m(\"a\", {\n          href: network.url,\n          \"class\": \"button\"\n        }, network.name));\n      })))));\n    }\n  };\n}\nmodule.exports = List;\n\n//# sourceURL=webpack://portfolio-garage404/./src/components/contact/Contact.js?");
+
+/***/ }),
+
 /***/ "./src/components/home/Home.js":
 /*!*************************************!*\
   !*** ./src/components/home/Home.js ***!
@@ -85,7 +95,7 @@ eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.
   \*********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar About = __webpack_require__(/*! ./components/about/About */ \"./src/components/about/About.js\");\nvar Projects = __webpack_require__(/*! ./components/project/List */ \"./src/components/project/List.js\");\n\n// m.route.prefix = ''; // For debug\n\nm.route(document.querySelector('div#root'), '/', {\n  '/': Home,\n  '/about': About,\n  '/projects': Projects,\n  '/:404': NotFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
+eval("var m = __webpack_require__(/*! mithril */ \"./node_modules/mithril/index.js\");\nvar Home = __webpack_require__(/*! ./components/home/Home */ \"./src/components/home/Home.js\");\nvar NotFound = __webpack_require__(/*! ./components/not-found/NotFound */ \"./src/components/not-found/NotFound.js\");\nvar About = __webpack_require__(/*! ./components/about/About */ \"./src/components/about/About.js\");\nvar Projects = __webpack_require__(/*! ./components/project/List */ \"./src/components/project/List.js\");\nvar Contact = __webpack_require__(/*! ./components/contact/Contact */ \"./src/components/contact/Contact.js\");\n\n// m.route.prefix = ''; // For debug\n\nm.route(document.querySelector('div#root'), '/', {\n  '/': Home,\n  '/about': About,\n  '/projects': Projects,\n  '/contact': Contact,\n  '/:404': NotFound\n});\n\n//# sourceURL=webpack://portfolio-garage404/./src/main.js?");
 
 /***/ }),
 
@@ -372,6 +382,17 @@ eval("// This exists so I'm only saving it once.\n\n\nmodule.exports = {}.hasOwn
 
 "use strict";
 eval("module.exports = JSON.parse('{\"projects\":[{\"name\":\"The Mountain\",\"urls\":{\"preview\":\"https://jeremyd-the-mountain.projets.garage404.com\",\"github\":\"https://github.com/jeremy-deurvillier/bootstrap-challenge-the_mountain\"},\"image\":\"the-mountain.png\",\"description\":\"Intégration d\\'une maquette en HTML / CSS. Utilisation de Bootstrap.\",\"tags\":[\"HTML\",\"CSS\",\"Bootstrap\"]}]}');\n\n//# sourceURL=webpack://portfolio-garage404/./datas/projects.json?");
+
+/***/ }),
+
+/***/ "./datas/resume.json":
+/*!***************************!*\
+  !*** ./datas/resume.json ***!
+  \***************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = JSON.parse('{\"identity\":{\"name\":{\"first\":\"Jérémy\",\"last\":\"Deurvillier\"},\"birthday\":\"16-12-1989\"},\"job\":{\"title\":\"Développeur Web\",\"tags\":[\"Next.js\",\"Symfony\",\"Wordpress\"]},\"contact\":{\"tel\":\"07 49 93 35 90\",\"mailto\":\"jerem.deurvil@gmail.com\",\"links\":[{\"name\":\"Github\",\"url\":\"https://github.com/jeremy-deurvillier\"},{\"name\":\"Linkedin\",\"url\":\"https://fr.linkedin.com/in/jeremy-deurvillier\"}]},\"about\":[\"Je suis Jérémy Deurvillier, Développeur Web depuis 2017. Je suis un passionné du code. J\\'aime apprendre et découvrir de nouvelles choses, dans tous les domaines. Les gros projets ne me font pas peur, j\\'aime les challenges et me donner à cent pour cent est une habitude de tous les jours. J\\'aime explorer les 64 cases du jeu d\\'échecs régulièrement, le karaté depuis de nombreuses années et enfin la randonnée, activité dont je ne me lasse jamais.\"],\"experiences\":[{\"job\":\"Agent de maintenance\",\"company\":\"Cartonnerie de La Réunion\",\"location\":\"Saint-Pierre, Réunion\",\"dates\":[2006,2008],\"activities\":[{\"activity\":\"Non renseigné.\"}]},{\"job\":\"Technicien de maintenance\",\"company\":\"SPHB\",\"location\":\"Saint-Pierre, Réunion\",\"dates\":[2009,2010],\"activities\":[{\"activity\":\"Maintenance préventive.\"},{\"activity\":\"Maintenance currative.\"},{\"activity\":\"Non renseigné.\"}]},{\"job\":\"Agent polyvalent\",\"company\":\"Famille Marie Jeunesse\",\"location\":\"Le Tampon, Réunion\",\"dates\":[2012,2015],\"activities\":[{\"activity\":\"Réparation et maintenance.\"},{\"activity\":\"Restauration d\\'un batiment.\"}]},{\"job\":\"Développeur Wordpress\",\"company\":\"Agence Nautilus\",\"location\":\"Saint-Denis, Réunion\",\"dates\":[2017],\"activities\":[{\"activity\":\"Refonte du site de l\\'agence.\"},{\"activity\":\"Utilisation du thème The 7.\"},{\"activity\":\"Utilisation des plugins ...\"}]}],\"education\":[{\"diploma\":\"BEP\",\"title\":\"Maintenance des Systèmes Mécaniques Automatisés\",\"training-site\":\"Lycée Boisjoly Potier\",\"location\":\"Le Tampon, Réunion\",\"date\":2007},{\"diploma\":\"BAC PRO\",\"title\":\"Maintenance des Équipements Industriels\",\"training-site\":\"Lycée Boisjoly Potier\",\"location\":\"Le Tampon, Réunion\",\"date\":2009},{\"diploma\":\"BAC +2\",\"title\":\"Développeur Logiciel\",\"training-site\":\"AFPAR\",\"location\":\"Saint-André, Réunion\",\"date\":2017},{\"diploma\":\"BAC +2\",\"title\":\"Développeur Web et Web Mobile\",\"training-site\":\"Garage 404\",\"location\":\"Saint-Étienne, France\",\"date\":2023}],\"skills\":{\"soft\":[\"Organisé\",\"Patient\",\"Esprit d\\'équipe\",\"Fiable\",\"Résilient\"],\"hard\":[\"Next.js\",\"Symfony\",\"Wordpress\",\"Docker\",\"Mithril\",\"Figma\"]},\"languages\":[\"Francais\"]}');\n\n//# sourceURL=webpack://portfolio-garage404/./datas/resume.json?");
 
 /***/ })
 
