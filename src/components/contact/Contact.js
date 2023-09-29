@@ -31,7 +31,7 @@ function List() {
                             {contact.links.map(network => {
                                 return (
                                     <li>
-                                        <a href={network.url} class="button">
+                                        <a href={network.url} class="button" target="_blank">
                                             {network.name}
                                         </a>
                                     </li>

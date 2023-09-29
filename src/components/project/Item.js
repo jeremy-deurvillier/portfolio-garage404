@@ -1,5 +1,42 @@
 const m = require("mithril");
 
+/* ** Affiche le contenu supplémentaire.
+*/
+function showContentPlus(e) {
+  e.preventDefault();
+  
+  let targetId, target;
+
+  if (e.target.href) {
+    targetId = e.target.href.split('#')[1];
+  } else {
+    targetId = e.target.parentNode.href.split('#')[1];
+  }
+
+  target = document.querySelector('#' + targetId);
+
+  if (target) {
+    target.style.setProperty('--content-plus-opacity', '1');
+    target.style.setProperty('--content-plus-transform', 'translate(0, -349px)');
+  }
+}
+
+/* ** Masque le contenu supplémentaire.
+*/
+function hideContentPlus(e) {
+  e.preventDefault();
+  
+  let targetId, target;
+
+  targetId = e.target.dataset.target;
+  target = document.querySelector(targetId);
+
+  if (target) {
+    target.style.setProperty('--content-plus-opacity', '0');
+    target.style.setProperty('--content-plus-transform', 'translate(-500px, -349px)');
+  }
+}
+
 function Item() {
   return {
     view: (vnode) => {
@@ -17,7 +54,7 @@ function Item() {
           <div class="content">
             <div class="header-item">
               <h4>{project.name}</h4>
-              <a href={'#content-plus-' + vnode.attrs.key} class="button-plus">
+              <a href={'#content-plus-' + vnode.attrs.key} class="button-plus" onclick={showContentPlus}>
                 <i class="fa fa-plus" aria-hidden="true"></i>
               </a>
             </div>
@@ -37,7 +74,7 @@ function Item() {
             </ul>
           </div>
           <div id={'content-plus-' + vnode.attrs.key} class="content-plus">
-            <a href="#">
+            <a href="#" data-target={'#content-plus-' + vnode.attrs.key} onclick={ hideContentPlus }>
               <i class="fa fa-times" aria-hidden="true"></i>
               Fermer
             </a>
