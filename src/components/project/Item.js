@@ -4,7 +4,7 @@ const m = require("mithril");
 */
 function showContentPlus(e) {
   e.preventDefault();
-  
+
   let targetId, target;
 
   if (e.target.href) {
@@ -25,7 +25,7 @@ function showContentPlus(e) {
 */
 function hideContentPlus(e) {
   e.preventDefault();
-  
+
   let targetId, target;
 
   targetId = e.target.dataset.target;
@@ -49,15 +49,15 @@ function Item() {
       let tags = project.tags;
 
       return (
-        <div class="item-project">
-          <img src={imgSrc} alt={imgAlt} />
+        <article class="item-project">
           <div class="content">
-            <div class="header-item">
+            <div>
               <h4>{project.name}</h4>
-              <a href={'#content-plus-' + vnode.attrs.key} class="button-plus" onclick={showContentPlus}>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </a>
+              <ul class="tags">
+                {tags.map((tag) => <li>{tag}</li>)}
+              </ul>
             </div>
+            <p>{project.description}</p>
             <ul class="item-project-links">
               <li>
                 <a href={preview} target="_blank">
@@ -73,19 +73,8 @@ function Item() {
               </li>
             </ul>
           </div>
-          <div id={'content-plus-' + vnode.attrs.key} class="content-plus">
-            <a href="#" data-target={'#content-plus-' + vnode.attrs.key} onclick={ hideContentPlus }>
-              <i class="fa fa-times" aria-hidden="true"></i>
-              Fermer
-            </a>
-            <div>
-              <p>{project.description}</p>
-              <ul>
-                {tags.map((tag) => <li>{tag}</li>)}
-              </ul>
-            </div>
-          </div>
-        </div>
+          <img src={imgSrc} alt={imgAlt} />
+        </article>
       );
     }
   };
