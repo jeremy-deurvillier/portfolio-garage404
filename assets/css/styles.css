@@ -194,6 +194,12 @@ h3>span {
 /* ***** About component ***** */
 
 #about {
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
     box-sizing: border-box;
     padding: 10px;
 }
@@ -201,12 +207,22 @@ h3>span {
 .text-long {
     text-align: justify;
     line-height: 1.5;
-    animation: fadeInUp 1.9s;
+    margin: 10px;
+    animation: fadeInUp 1.4s;
 }
 
 .about-cta {
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     margin: 80px 0;
+    animation: bounceInUp 1.9s;
+}
+
+.about-cta > a {
+    padding: 15px;
 }
 
 /* ***** Projects List component ***** */
@@ -380,6 +396,15 @@ h3>span {
     #home > h3 {
         text-align: left;
     }
+
+    #about {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .text-long {
+        margin: 10px 0;
+    }
 }
 
 /* ***** md suffixe ***** */
@@ -452,6 +477,10 @@ h3>span {
     #home > h3 {
         font-size: 1.8em;
     }
+
+    h3>span {
+        display: inline;
+    }
     
 }
 
@@ -459,6 +488,10 @@ h3>span {
 @media screen and (min-width: 1024px) {
     #home {
         width: 55%;
+    }
+
+    #about {
+        width: 60%;
     }
 }
 
