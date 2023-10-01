@@ -4,8 +4,11 @@
     --light-color: #fafafa;
     --dark-color: #0a0a0a;
 
-    --menu-border-radius: 0;
-    --menu-transform: translateX(70vw);
+    --menu-max-width: 260px;
+    --menu-width-show: 70vw;
+    --menu-width-hide: 0;
+
+    --menu-width: var(--menu-width-hide);
 
     --content-plus-opacity: 0;
     --content-plus-transform: translate(-500px, -349px);
@@ -87,24 +90,22 @@ a:visited {
 
 #menu {
     position: fixed;
-    left: 30vw;
+    right: 0;
     top: 0;
     bottom: 0;
     z-index: 1000;
     color: var(--light-color);
     background-color: var(--dark-color);
-    width: 70vw;
+    width: var(--menu-width);
+    max-width: var(--menu-max-width);
     box-sizing: border-box;
-    border-radius: var(--menu-border-radius);
-    padding: 10px;
-    transform: var(--menu-transform);
-    transition: transform .5s, border-radius .7s;
-    animation-timing-function: ease-in-out;
+    border-radius: 40% 0 0 80%;
+    padding: 0;
+    transition: width .5s;
 }
 
 #menu:target {
-    border-radius: 40% 0 0 80%;
-    transform: translateX(0);
+    width: var(--menu-width);
 }
 
 #menu>li>a {
@@ -112,6 +113,7 @@ a:visited {
     text-align: center;
     color: var(--light-color);
     display: block;
+    opacity: 1;
     margin: 5px;
     padding: 10px;
 }
@@ -119,11 +121,6 @@ a:visited {
 #menu>li:first-child>a {
     text-align: right;
     margin-bottom: 20px;
-}
-
-
-#menu>li>a:hover {
-    color: var(--light-color);
 }
 
 #menu>li:not(:first-child)>a::before {
@@ -139,12 +136,10 @@ a:visited {
 }
 
 #menu>li:not(:first-child)>a:hover::before {
-    content: "<";
     opacity: 1;
 }
 
 #menu>li:not(:first-child)>a:hover::after {
-    content: " />";
     opacity: 1;
 }
 
@@ -171,8 +166,7 @@ a:visited {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px);
-    /* 70px = #navigation height */
+    height: calc(100vh - 70px); /* 70px = #navigation height */
     box-sizing: border-box;
     overflow: hidden;
     padding: 10px;
@@ -372,3 +366,80 @@ h3>span {
 #contact ul li:last-child {
     animation: bounceInUp 1.9s;
 }
+
+/* ***** sm suffixe ***** */
+@media screen and (min-width: 576px) {}
+
+/* ***** md suffixe ***** */
+@media screen and (min-width: 768px) {
+    #navigation a[href="#menu"],
+    #navigation a#close-menu {
+        display: none;
+    }
+
+    #menu {
+        position: static;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        width: 90vw;
+        max-width: 90vw;
+        flex: 0 1 auto;
+        display: flex;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        border-radius: 0;
+        transition: width .5s;
+    }
+    
+    #menu:target {
+        width: var(--menu-width);
+    }
+
+    #menu>li,
+    #menu>li>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu>li>a {
+        color: var(--dark-color);
+        flex-flow: column wrap;
+    }
+
+    #menu>li>a:hover {
+        color: var(--dark-color);
+    }
+
+    #menu>li:not(:first-child)>a::before {
+        content: "";
+    }
+
+    #menu>li:not(:first-child)>a::after {
+        content: "";
+        color: var(--dark-color);
+        background: var(--dark-color);
+        width: 0;
+        height: 3px;
+        display: block;
+        flex: 1 1 auto;
+        align-self: flex-start;
+        opacity: 1;
+        margin-top: 5px;
+        transition: width .6s;
+    }
+
+    #menu>li:not(:first-child)>a:hover::after {
+        width: 100%;
+    }
+    
+}
+
+/* ***** lg suffixe ***** */
+@media screen and (min-width: 1024px) {}
+
+/* ***** xl suffixe ***** */
+@media screen and (min-width: 1280px) {}
+
+/* ***** 2xl suffixe ***** */
+@media screen and (min-width: 1536px) {}

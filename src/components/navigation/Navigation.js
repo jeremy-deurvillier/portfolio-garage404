@@ -4,13 +4,11 @@ const Link = m.route.Link;
 function openMenu(e) {
     e.preventDefault();
 
-    root.style.setProperty('--menu-border-radius', '40% 0 0 80%');
-    root.style.setProperty('--menu-transform', 'translateX(0)');
+    root.style.setProperty('--menu-width', 'var(--menu-width-show)');
 }
 
 function closeMenu() {
-    root.style.setProperty('--menu-border-radius', '0');
-    root.style.setProperty('--menu-transform', 'translateX(70vw)');
+    root.style.setProperty('--menu-width', 'var(--menu-width-hide)');
 }
 
 function Navigation() {
