@@ -11,7 +11,7 @@ function Home() {
                 </header>
                 <section id="home">
                     <p class="hi">Salut, je suis</p>
-                    <h2>Jérémy Deurviller</h2>
+                    <h2>Jérémy Deurvillier</h2>
                     <h3>Développeur Web <span>passionné</span></h3>
                     <p class="home-cta">
                         <m.route.Link href="/about" class="button">Découvrir</m.route.Link>

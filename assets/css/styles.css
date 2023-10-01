@@ -368,7 +368,19 @@ h3>span {
 }
 
 /* ***** sm suffixe ***** */
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) {
+    #home {
+        justify-content: center;
+        align-items: flex-start;
+        width: 70%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    #home > h3 {
+        text-align: left;
+    }
+}
 
 /* ***** md suffixe ***** */
 @media screen and (min-width: 768px) {
@@ -432,14 +444,34 @@ h3>span {
     #menu>li:not(:first-child)>a:hover::after {
         width: 100%;
     }
+
+    #home > h2 {
+        font-size: 2.2em;
+    }
+
+    #home > h3 {
+        font-size: 1.8em;
+    }
     
 }
 
 /* ***** lg suffixe ***** */
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    #home {
+        width: 55%;
+    }
+}
 
 /* ***** xl suffixe ***** */
-@media screen and (min-width: 1280px) {}
+@media screen and (min-width: 1280px) {
+    #home > h2 {
+        font-size: 2.6em;
+    }
+
+    #home > h3 {
+        font-size: 2.2em;
+    }
+}
 
 /* ***** 2xl suffixe ***** */
 @media screen and (min-width: 1536px) {}
