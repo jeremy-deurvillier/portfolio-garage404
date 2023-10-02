@@ -241,7 +241,7 @@ h3>span {
 .item-project {
     width: 256px;
     height: 454px;
-    border: 1px solid var(--dark-color);
+    border: 3px solid var(--dark-color);
     border-radius: 18px;
     box-sizing: border-box;
     overflow: hidden;
@@ -255,10 +255,10 @@ h3>span {
 
 .item-project .content {
     background: var(--light-color);
-    width: 254px;
-    height: 452px;
+    width: calc(256px - 6px); /* 6px = .item-project border-width (3px * 2, right + left) */
+    height: calc(454px - 6px); /* 6px = .item-project border-width (3px * 2, top + bottom) */
     box-sizing: border-box;
-    border-radius: 18px;
+    border-radius: 12px;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
