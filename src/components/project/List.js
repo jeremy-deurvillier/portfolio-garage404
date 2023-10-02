@@ -4,7 +4,7 @@ const Navigation = require('../navigation/Navigation');
 const Item = require('./Item');
 
 let rawProjects = require('../../../datas/projects.json');
-let projects = rawProjects.projects;
+let projects = rawProjects.projects.reverse();
 
 function List() {
     return {
