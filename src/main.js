@@ -5,7 +5,7 @@ const About = require('./components/about/About');
 const Projects = require('./components/project/List');
 const Contact = require('./components/contact/Contact');
 
-m.route(document.querySelector('div#root'), '/', {
+m.route(document.querySelector('div#app'), '/', {
     '/': Home,
     '/about': About,
     '/projects': Projects,
