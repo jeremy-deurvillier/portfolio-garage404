@@ -4,11 +4,11 @@ const Link = m.route.Link;
 function openMenu(e) {
     e.preventDefault();
 
-    root.style.setProperty('--menu-width', 'var(--menu-width-show)');
+    document.querySelector('#menu').style.setProperty('--menu-width', 'var(--menu-width-show)');
 }
 
 function closeMenu() {
-    root.style.setProperty('--menu-width', 'var(--menu-width-hide)');
+    document.querySelector('#menu').style.setProperty('--menu-width', 'var(--menu-width-hide)');
 }
 
 function Navigation() {
