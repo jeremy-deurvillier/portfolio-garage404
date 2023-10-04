@@ -1,6 +1,5 @@
 const m = require("mithril");
 const Layout = require('../layout/Layout');
-const Navigation = require('../navigation/Navigation');
 const Item = require('./Item');
 
 let rawProjects = require('../../../datas/projects.json');
@@ -10,9 +9,6 @@ function List() {
     return {
         view: () => (
             <Layout>
-                <header>
-                    <Navigation />
-                </header>
                 <section id="projects">
                     <h2>Projets</h2>
                     <div>

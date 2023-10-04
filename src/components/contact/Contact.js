@@ -1,6 +1,5 @@
 const m = require("mithril");
 const Layout = require('../layout/Layout');
-const Navigation = require('../navigation/Navigation');
 
 let rawContact = require('../../../datas/resume.json');
 let contact = rawContact.contact;
@@ -9,9 +8,6 @@ function List() {
     return {
         view: () => (
             <Layout>
-                <header>
-                    <Navigation />
-                </header>
                 <section id="contact">
                     <h2>Contact</h2>
                     <div class="content">

@@ -1,6 +1,5 @@
 const m = require("mithril");
 const Layout = require('../layout/Layout');
-const Navigation = require('../navigation/Navigation');
 
 let resume = require('../../../datas/resume.json');
 let identity = resume.identity;
@@ -10,9 +9,6 @@ function Home() {
     return {
         view: () => (
             <Layout>
-                <header>
-                    <Navigation />
-                </header>
                 <section id="home">
                     <p class="hi">Salut, je suis</p>
                     <h2>{ identity.name.first + ' ' + identity.name.last }</h2>
