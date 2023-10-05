@@ -12,8 +12,70 @@ function closeMenu() {
 }
 
 function Navigation() {
+    const COLORSCHEME = 'colorscheme'; // Clé pour stocker le colorscheme dans localStorage.
+
+    /* ** Récupère le thème (light / dark) du client.
+    * Enregistre le thème dans localStorage.
+    */
+    function saveColorScheme() {
+        let lightMode;
+
+        if (!localStorage.getItem(COLORSCHEME)) {
+            lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+            localStorage.setItem(COLORSCHEME, lightMode?'light':'dark');
+        }
+    }
+
+    /* ** Définit l'icône à afficher en fonction du thème actuel.
+    */
+    function choiceIcon() {
+        let button = document.querySelector('#dark-mode');
+        let icon = (localStorage.getItem(COLORSCHEME) == 'light')?'fa fa-moon-o':'fa fa-sun-o';
+
+        button.setAttribute('class', icon);
+    }
+
+    /* ** Met à jour les couleurs de l'UI en fonction du thème.
+    */
+    function updateUI() {
+        let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--light-color');
+        let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--dark-color');
+        let colorscheme = localStorage.getItem(COLORSCHEME);
+
+        if (colorscheme == 'light') {
+            document.documentElement.style.setProperty('--primary-color', darkColor);
+            document.documentElement.style.setProperty('--secondary-color', lightColor);
+        } else {
+            document.documentElement.style.setProperty('--primary-color', lightColor);
+            document.documentElement.style.setProperty('--secondary-color', darkColor);
+        }
+
+        choiceIcon();
+    }
+
+    /* ** Change le thème actuel de l'application.
+    */
+    function updateColorScheme(e) {
+        e.preventDefault();
+
+        let colorscheme = localStorage.getItem(COLORSCHEME);
+
+        if (colorscheme == 'light') {
+            localStorage.setItem(COLORSCHEME, 'dark');
+        } else {
+            localStorage.setItem(COLORSCHEME, 'light');
+        }
+
+        updateUI();
+    }
+
     return {
-        view: () => (
+        oninit: saveColorScheme,
+
+        oncreate: updateUI,
+        
+        view: (vnode) => (
             <nav id="navigation">
                 <h1 class="brand">
                     <Link href="/">JD</Link>
@@ -43,6 +105,9 @@ function Navigation() {
                     </li>
                     <li>
                         <a href="/assets/medias/pdf/jeremy-deurvillier_resume.pdf" target="_blank">Mon CV</a>
+                    </li>
+                    <li>
+                        <i id="dark-mode" onclick={ updateColorScheme }></i>
                     </li>
                 </ul>
             </nav>

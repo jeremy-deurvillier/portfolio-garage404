@@ -4,12 +4,14 @@ const Navigation = require('../navigation/Navigation');
 function Layout() {
     return {
         view: (vnode) => (
-            <main id="layout">
+            <div id="layout">
                 <header>
                     <Navigation />
                 </header>
-                {vnode.children}
-            </main>
+                <main>
+                    { vnode.children }
+                </main>
+            </div>
         )
     };
 }
