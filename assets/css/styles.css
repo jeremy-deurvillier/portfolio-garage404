@@ -517,14 +517,14 @@ h3>span {
 
 @media screen and (prefers-color-scheme: light) {
     :root {
-        --light-color: #e5e5e5;
+        --light-color: #F2F2F2;
         --dark-color: #262626;
     }
 }
 
 @media screen and (prefers-color-scheme: dark) {
     :root {
-        --light-color: #171717;
-        --dark-color: #e5e5e5;
+        --light-color: #262626;
+        --dark-color: #F2F2F2;
     }
 }
