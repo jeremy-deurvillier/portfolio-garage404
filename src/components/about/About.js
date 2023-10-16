@@ -9,7 +9,7 @@ function About() {
         view: () => (
             <Layout>
                 <section id="about">
-                    <h2>A propos</h2>
+                    <h2>À propos</h2>
                     { about.map(text => <p class="text-long">{ text }</p>) }
                     <p class="about-cta">
                         <m.route.Link href="/projects" class="button">Voir mes projets</m.route.Link>
