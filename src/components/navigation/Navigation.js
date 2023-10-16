@@ -95,7 +95,7 @@ function Navigation() {
                         <Link href="/" onclick={ closeMenu }>Accueil</Link>
                     </li>
                     <li>
-                        <Link href="/about" onclick={ closeMenu }>A propos</Link>
+                        <Link href="/about" onclick={ closeMenu }>À propos</Link>
                     </li>
                     <li>
                         <Link href="/projects" onclick={ closeMenu }>Projets</Link>
